@@ -1,0 +1,41 @@
+<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<path d="M18.75 51.75H10V78H18.75V51.75Z" fill="#905E43"/>
+<path d="M80 51.75H71.25V78H80V51.75Z" fill="#905E43"/>
+<path d="M71.25 51.75H62.5V78H71.25V51.75Z" fill="#B37B62"/>
+<path d="M27.5 51.75H18.75V78H27.5V51.75Z" fill="#B37B62"/>
+<path d="M36.25 69.25H27.5V78H36.25V69.25Z" fill="#B37B62"/>
+<path d="M62.5 69.25H53.75V78H62.5V69.25Z" fill="#B37B62"/>
+<path d="M62.5 60.5H53.75V69.25H62.5V60.5Z" fill="#774235"/>
+<path d="M36.25 60.5H27.5V69.25H36.25V60.5Z" fill="#774235"/>
+<path d="M53.75 51.75H36.25V78H53.75V51.75Z" fill="#905E43"/>
+<path d="M62.5 51.75H53.75V60.5H62.5V51.75Z" fill="#B78272"/>
+<path d="M36.25 51.75H27.5V60.5H36.25V51.75Z" fill="#B78272"/>
+<path d="M36.25 43H27.5V51.75H36.25V43Z" fill="#009611"/>
+<path d="M62.5 43H53.75V51.75H62.5V43Z" fill="#009611"/>
+<path d="M71.25 43H62.5V51.75H71.25V43Z" fill="white"/>
+<path d="M27.5 43H18.75V51.75H27.5V43Z" fill="white"/>
+<path d="M18.75 16.75H10V51.75H18.75V16.75Z" fill="#B78272"/>
+<path d="M80 16.75H71.25V51.75H80V16.75Z" fill="#B78272"/>
+<path d="M71.1447 34.2344H18.8555V42.9687H71.1447V34.2344Z" fill="#332411"/>
+<path d="M53.75 43H36.25V51.75H53.75V43Z" fill="#B37B62"/>
+<path d="M71.25 25.5H62.5V34.25H71.25V25.5Z" fill="#B78272"/>
+<path d="M27.5 25.5H18.75V34.25H27.5V25.5Z" fill="#B78272"/>
+<path d="M71.25 16.75H18.75V25.5H71.25V16.75Z" fill="#BE886C"/>
+<path d="M62.5 25.5H27.5V34.25H62.5V25.5Z" fill="#BE886C"/>
+<path d="M80 8H36.25V16.75H80V8Z" fill="#BE886C"/>
+<path d="M36.25 8H27.5V16.75H36.25V8Z" fill="#B37B62"/>
+<path d="M27.5 8H10V16.75H27.5V8Z" fill="#BE886C"/>
+</g>
+<defs>
+<filter id="filter0_d" x="0" y="0" width="90" height="90" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

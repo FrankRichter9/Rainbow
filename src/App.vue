@@ -1,32 +1,106 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container">
+      <Header />
+      <router-view/>
+      <Footer />
     </div>
-    <router-view/>
   </div>
 </template>
 
+
+<script>
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: Inter;
+  src: url(static/Inter-VariableFont_slnt,wght.ttf);
+}
+#app{
+  background-color: #0B0B0B;
+  background-image: url('assets/img/BG.png');
+  color:  #fff;
+}
+a{
+  color: #fff;
 }
 
-#nav {
-  padding: 30px;
+
+.container{
+  font-family: Inter;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.Article{
+  width: 95.1388888889%;
+  margin: 0 auto;
+  margin-bottom: 4.861111111111111%;
+  box-sizing: border-box;
+  padding: 5.109489051094891%;
+  background-color: rgba(255, 255, 255, .05);
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.Article p{
+  display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+
+  margin: 0 0 3.941605839416058% 0;
 }
+
+Article ul{
+    list-style: none;
+}
+
+
+
+
+.cards ul{
+  display: flex;
+  
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow: auto;
+  
+}
+@media screen and (max-width: 1024px)  {
+    .Article{
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 15.625%;
+      padding: 0;
+  }
+  
+    .Article .header_link{
+      display: block;
+      /* margin: 0 0 9.375% 0 ; */
+      padding: 9.375% 0 9.375% 6.125%;
+    }
+
+    .cards ul li{
+      margin: 0 0 0 6.125%;
+    }
+    
+}
+
+
+
+
 </style>
