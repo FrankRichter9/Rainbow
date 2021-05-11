@@ -46,12 +46,14 @@ export default {
 <style scoped>
 .Main_products{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow: auto;
     justify-content: space-between;
 }
 
 .Main_products_section{
-    /* overflow-y: scroll; */
+    overflow: auto;
+    flex-wrap: nowrap;
     flex-basis: 75%;
 }
 .Case_and_Promocode_section{
