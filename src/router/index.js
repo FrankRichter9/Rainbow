@@ -19,10 +19,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/news',
+    path: '/NewItemsPage',
     name: 'News',
-    component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
+
+    component: () => import(/* webpackChunkName: "about" */ '../views/NewItemsPage.vue')
   },
+
   {
     path: '/keys',
     name: 'Keys',
@@ -30,7 +32,8 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({mode: 'history',
+const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

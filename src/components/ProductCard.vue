@@ -10,7 +10,7 @@
             <span class="card_name">Need for Speed: Most Wanted</span>
             <div class="flex">
                 <span class="card_price">1119 ₽</span>
-                <a href="#" class="button">	&#8250;</a>
+                <a href="#" class="button" @click.prevent="$emit('open', 5)">	&#8250;</a>
             </div>
         </div>
     </li>

@@ -2,7 +2,7 @@
     <li>
         <a href="#">
             <div class="Main_card"
-                v-on:mouseover="active = true" 
+                v-on:mouseover="activation()" 
                 v-on:mouseout="active = false"
                 >
                 <div class="reletive">
@@ -47,7 +47,9 @@ export default {
         }
     },
     methods: {
-
+        activation(){
+            if(document.documentElement.clientWidth > 1024)this.active = true
+        }
     },
 
 }
