@@ -46,7 +46,7 @@ export default {
     line-height: 19px;
     margin-right: 2.5%;
 }
-.arrow{
+.arrow {
     display: inline-block;
     transform: scaleY(0.8);
 }
@@ -54,7 +54,7 @@ export default {
     .card_list {
         justify-content: center;
     }
-    .none{
+    .none {
         display: none;
     }
     .sortings {
@@ -64,8 +64,7 @@ export default {
         margin-right: 30px;
     }
     .card_list li {
-    margin: 0 0 25px 0;
-    
-}
+        margin: 0 0 25px 0;
+    }
 }
 </style>
