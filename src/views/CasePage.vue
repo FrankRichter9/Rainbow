@@ -1,6 +1,7 @@
 <template>
     <div>
         <Header />
+        <CaseScrolling />
         <CaseForm/>
         <Footer />
     </div>
@@ -10,13 +11,15 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import CaseForm from "@/components/CaseForm"
+import CaseScrolling from "@/components/CaseScrolling"
 
 export default {
     name: "Home",
     components: {
         Header,
         Footer,
-        CaseForm
+        CaseForm,
+        CaseScrolling,
     },
 }
 </script>

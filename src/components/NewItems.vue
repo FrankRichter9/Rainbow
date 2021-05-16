@@ -1,6 +1,6 @@
 <template>
     <article class="Article New_article">
-        <router-link class="link" to="/news">
+        <router-link class="link" to="/NewItemsPage">
             <p class="header_link">Новинки &rarr;</p>
         </router-link>
         <section class="cards">

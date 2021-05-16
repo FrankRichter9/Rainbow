@@ -28,3 +28,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.link{
+    text-decoration: none;
+}
+</style>
