@@ -3,7 +3,8 @@
         <section class="Main_products_section">
             <ul class="Main_products">
                 <MainProductCard
-                    v-for="product in products"
+                    v-for="(product, i) in products"
+                    v-bind:key="i"
                 />
             
             </ul>
