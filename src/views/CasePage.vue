@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header />
-        <KeysFullList />
+        <CaseForm/>
         <Footer />
     </div>
 </template>
@@ -9,14 +9,14 @@
 <script>
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import KeysFullList from "@/components/KeysFullList"
+import CaseForm from "@/components/CaseForm"
 
 export default {
     name: "Home",
     components: {
         Header,
         Footer,
-        KeysFullList,
+        CaseForm
     },
 }
 </script>
