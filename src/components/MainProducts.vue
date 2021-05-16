@@ -3,8 +3,9 @@
         <section class="Main_products_section">
             <ul class="Main_products">
                 <MainProductCard
-                    v-for="(product, i) in products"
-                    v-bind:key="i"
+                    v-for="(product, index) in products"
+                    v-bind:key="index"
+                    :index="index"
                 />
             
             </ul>
