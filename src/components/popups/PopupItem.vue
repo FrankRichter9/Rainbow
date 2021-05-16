@@ -28,8 +28,10 @@
                 </div>
                 <div class="price">
                     <span>Цена:</span>
-                    <span class="old_price">119₽</span>
-                    <span class="now_price">119₽</span>
+                    <span>
+                        <span class="old_price">119₽</span>
+                        <span class="now_price">119₽</span>
+                    </span>
                 </div>
                     <section>
                         <span class="label">Гарантия</span>
@@ -96,6 +98,11 @@ export default {
 </script>
 
 <style scoped>
+    
+    button{
+        padding: 0;
+        border: none;
+    }
     .popup{
         position: fixed;
         width: 100%;
@@ -163,19 +170,26 @@ export default {
         font-weight: bold;
         font-size: 34px;
         line-height: 41px;
+
+        display: flex;
+        justify-content: space-between;
     }
 
     .old_price{
-        margin: 0 0 0 35%;
+        /* margin: 0 0 0 35%; */
         font-family: Inter;
         font-style: normal;
         font-weight: 200;
         font-size: 24px;
         line-height: 29px;
+
+        color: rgba(255, 255, 255, 0.726);
+
+        text-decoration: line-through;
     }
 
     .now_price{
-        margin: 0 0 0 3%;
+        margin: 0 3% 0 5%;
         font-family: Inter;
         font-style: normal;
         font-weight: bold;
@@ -210,6 +224,8 @@ export default {
 
         height: 50px;
         width: 100%;
+
+        color: #fff;
         
         background: rgba(255, 255, 255, 0.05);
         /* Transparency/White 40% */
@@ -224,6 +240,7 @@ export default {
 
     .radio{
         display: flex;
+        justify-content: space-between;
 
         border-radius: 30px;
         border: 1px solid rgba(255, 255, 255, 0.4);
@@ -307,9 +324,67 @@ export default {
     .counter span:first-child, .counter span:nth-child(3){
         margin: 0 15px;
         font-size: 20px;
+        cursor: pointer;
     }
 
     .submit_margin{
         margin: 22px 0 50px 0;
+    }
+
+
+    @media screen and (max-width: 1024px)  {
+        .popup_body{
+            margin: 0;
+            flex-direction: column;
+            width: 100%;
+
+            box-sizing: border-box;
+            
+        }
+
+        .info, .form{
+            width: 100%;
+            
+        }
+        
+        .popup{
+            overflow: scroll;
+        }
+
+        .info .title{
+            width: 80%;
+        }
+
+        .info .text{
+            width: 90%;
+            height: 300px;
+            overflow: scroll;
+            text-overflow: ellipsis
+
+        }
+
+        .close_button{
+        text-align: right;
+        margin: -420px 0 400px 0 ;
+        font-size: 54px;
+        color: #000;
+        }
+
+        .submit_margin{
+            flex-direction: column;
+        }
+
+        .submit_margin .submit{
+            margin: 22px 0 10px 0;
+            height: 55px;
+            width: 100%;
+        }
+
+        .counter{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
     }
 </style>

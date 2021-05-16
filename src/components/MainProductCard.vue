@@ -4,6 +4,11 @@
             <div class="Main_card"
                 v-on:mouseover="activation()" 
                 v-on:mouseout="active = false"
+                :class="{
+                    Main_card_1: index + 1 === 1,
+                    Main_card_2: index + 1 === 2,
+                    Main_card_3: index + 1 === 3 
+                }"
                 >
                 <div class="reletive">
                     <div
@@ -41,6 +46,7 @@
 <script>
 
 export default {
+    props: ['index'],
     data(){
         return {
             active: false,
@@ -121,12 +127,23 @@ li:first-child{
 }
 
 .Main_card{
-    background-color: #6BF854;
 
     width: 285px;
     height: 450px;
 
     overflow: hidden;
+}
+
+.Main_card_1{
+    background-color: #6BF854;
+}
+
+.Main_card_2{
+    background-color: #8936F3;
+}
+
+.Main_card_3{
+    background-color: #FFBB37;
 }
 
 .reletive{
@@ -144,7 +161,15 @@ li:first-child{
     border:1px solid rgba(107, 248, 84, 1);
 }
 
-.vignette:after {
+.Main_card_2 .vignette img{
+    border:1px solid #8936F3;
+}
+
+.Main_card_3 .vignette img{
+    border:1px solid #FFBB37;
+}
+
+.Main_card_1 .vignette:after {
     content: "";
     display: block;
     background-color: red;
@@ -154,6 +179,34 @@ li:first-child{
     top: 0;
     left: 0;
     background: radial-gradient(ellipse at center, rgba(107, 248, 84, 0) 0%,rgba(107, 248, 84, 1) 70%,rgba(107, 248, 84, 100%));
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.Main_card_2 .vignette:after {
+    content: "";
+    display: block;
+    background-color: red;
+    width: 100%;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(137, 54, 243, 0) 0%,rgba(137, 54, 243, 1) 70%,rgba(137, 54, 243, 100%));
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.Main_card_3 .vignette:after {
+    content: "";
+    display: block;
+    background-color: red;
+    width: 100%;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(255, 187, 55, 0) 0%,rgba(255, 187, 55, 1) 70%,rgba(255, 187, 55, 100%));
     border-radius: 50%;
     z-index: 1;
 }
