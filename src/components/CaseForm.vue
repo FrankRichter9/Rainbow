@@ -112,6 +112,8 @@ input {
 
     box-sizing: border-box;
     padding: 20px;
+    outline:none;
+    color: #FFF;
 }
 
 .radio {
@@ -150,6 +152,7 @@ input {
     width: 50%;
     background: #f0f1f4;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 /*  */
@@ -158,7 +161,7 @@ input {
     /* 
         height: 50px;
         width: 100%; */
-
+    display: flex;
     background: rgba(255, 255, 255, 0.05);
     /* Transparency/White 40% */
 
@@ -171,6 +174,7 @@ input {
     margin-right: 5%;
     width: 40%;
     text-align: center;
+    justify-content: space-between;
 }
 
 .flex .submit {
@@ -202,9 +206,33 @@ input {
 .counter span:nth-child(3) {
     margin: 0 15px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .submit_margin {
     margin: 50px 0 50px 0;
 }
+
+@media only screen and (max-width: 480px)  {
+    .form {
+        padding: 0 12px;
+    }
+    .info {
+        display: none;
+    }
+    .submit_margin{
+        flex-direction: column;
+    }
+    .counter{
+        display: flex;
+        width: 100%;
+        margin-bottom: 40px;
+        justify-content: space-between;
+    }
+    .flex .submit {
+        width: 100%;
+        height: 61px;
+    }
+}
+
 </style>
