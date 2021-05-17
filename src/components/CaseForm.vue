@@ -14,10 +14,10 @@
                 <span class="label">Гарантия</span>
 
                 <div class="radio">
-                    <div>Без</div>
-                    <div>Неделя</div>
-                    <div>Месяц</div>
-                    <div>Год</div>
+                    <div :class="{active:isActive === 'no'}" @click="isActive = 'no'">Без</div>
+                    <div :class="{active:isActive === 'week'}" @click="isActive = 'week'">Неделя</div>
+                    <div :class="{active:isActive === 'month'}" @click="isActive = 'month'">Месяц</div>
+                    <div :class="{active:isActive === 'year'}" @click="isActive = 'year'">Год</div>
                 </div>
             </section>
             <label for="">
@@ -40,9 +40,9 @@
 
             <div class="flex submit_margin">
                 <div class="counter">
-                    <span>-</span>
-                    <span>1</span>
-                    <span>+</span>
+                    <span @click = "count > 1 ? count--:count">-</span>
+                    <span>{{count}}</span>
+                    <span @click = "count++">+</span>
                 </div>
 
                 <button type="button" class="submit">Купить за 169 ₽</button>
@@ -52,7 +52,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+    data(){
+        return{
+            count:1,
+            isActive:'no'
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -112,8 +119,8 @@ input {
 
     box-sizing: border-box;
     padding: 20px;
-    outline:none;
-    color: #FFF;
+    outline: none;
+    color: #fff;
 }
 
 .radio {
@@ -122,6 +129,7 @@ input {
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     justify-content: space-between;
+    user-select: none;
 }
 
 .radio div {
@@ -175,6 +183,7 @@ input {
     width: 40%;
     text-align: center;
     justify-content: space-between;
+    user-select: none;
 }
 
 .flex .submit {
@@ -213,17 +222,21 @@ input {
     margin: 50px 0 50px 0;
 }
 
-@media only screen and (max-width: 480px)  {
+.active {
+    border:1px solid red;
+}
+
+@media only screen and (max-width: 480px) {
     .form {
         padding: 0 12px;
     }
     .info {
         display: none;
     }
-    .submit_margin{
+    .submit_margin {
         flex-direction: column;
     }
-    .counter{
+    .counter {
         display: flex;
         width: 100%;
         margin-bottom: 40px;
@@ -234,5 +247,4 @@ input {
         height: 61px;
     }
 }
-
 </style>
