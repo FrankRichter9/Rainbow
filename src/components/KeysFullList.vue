@@ -1,18 +1,18 @@
 <template>
     <article class="Article Key_article">
         <p class="header_link">{{title}}</p>
-        <div class="sortings">
+        <div class="sortings" :class="{none: type === 'case' }">
             <p class="none">Сортировать:</p>
             <p>По популярности</p>
             <p>По цене <span class="arrow">&or;</span></p>
         </div>
         <section class="cards">
-            <ul class="card_list">
+            <ul class="card_list" :class="{mobile: type === 'case'}">
                 <ProductCard 
                     v-for="i in 16"
                     v-bind:key="i"
                     @open="open"
-                     />
+                    />
             </ul>
         </section>
     </article>
@@ -75,6 +75,18 @@ export default {
     }
     .card_list li {
         margin: 0 0 25px 0;
+    }
+    .mobile{
+        flex-wrap: nowrap;
+        overflow: auto;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+    }
+    .mobile li {
+        margin: 0 0 0 6.125%;
+    }
+    .none{
+        display: none;
     }
 }
 </style>
