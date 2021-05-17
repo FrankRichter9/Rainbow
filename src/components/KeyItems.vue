@@ -5,7 +5,7 @@
         </router-link>
         <section class="cards">
             <ul>
-                <ProductCard @open="open" v-for="i in 4" v-bind:key="i" />
+                <ProductCard v-for="i in 4" v-bind:key="i" />
             </ul>
         </section>
     </article>
@@ -22,9 +22,7 @@ export default {
         ProductCard,
     },
     methods: {
-        open: function(id = 0) {
-            this.$emit("open", id)
-        },
+       
     },
 }
 </script>

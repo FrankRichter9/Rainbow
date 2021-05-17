@@ -10,12 +10,33 @@
             <span class="card_name">Need for Speed: Most Wanted</span>
             <div class="flex">
                 <span class="card_price">1119 ₽</span>
-                <a href="#" class="button" @click.prevent="$emit('open', 5)">	&#8250;</a>
+                <a href="#" class="button" @click.prevent="openPopupId = 1">	&#8250;</a>
             </div>
         </div>
+
+        <PopupItem :openId="openPopupId" @close="closePopup" />
     </li>
 </template>
 
+<script>
+import PopupItem from '@/components/popups/PopupItem'
+
+export default {
+    components: {
+        PopupItem
+    },
+    data(){
+        return {
+            openPopupId: -1,
+        }
+    },
+    methods: {
+        closePopup: function(){
+            this.openPopupId = -1
+        }
+    },
+}
+</script>
 
 <style scoped>
 .card{

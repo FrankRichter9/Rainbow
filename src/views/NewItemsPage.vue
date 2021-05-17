@@ -2,7 +2,7 @@
 <div>
   <Header />
   <main>
-    <NewItems />
+    <KeysFullList :title="'Новинки'" />
   </main>
   <Footer />
 </div>
@@ -15,6 +15,7 @@ import KeyItems from '@/components/KeyItems'
 import AccountItems from '@/components/AccountItems'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import KeysFullList from '@/components/KeysFullList'
 
 export default {
 
@@ -27,6 +28,7 @@ export default {
     AccountItems,
     Header,
     Footer,
+    KeysFullList,
   }
 }
 </script>

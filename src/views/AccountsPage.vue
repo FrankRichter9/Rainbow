@@ -1,9 +1,9 @@
 <template>
     <div>
         <Header />
-        <CaseScrolling />
-        <CaseForm/>
-        <KeysFullList :title="'Состав кейса'" :type="'case'"/>
+        <main>
+            <KeysFullList :title="'Аккаунты'" />
+        </main>
         <Footer />
     </div>
 </template>
@@ -11,8 +11,6 @@
 <script>
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import CaseForm from "@/components/CaseForm"
-import CaseScrolling from "@/components/CaseScrolling"
 import KeysFullList from "@/components/KeysFullList"
 
 export default {
@@ -20,8 +18,6 @@ export default {
     components: {
         Header,
         Footer,
-        CaseForm,
-        CaseScrolling,
         KeysFullList,
     },
 }

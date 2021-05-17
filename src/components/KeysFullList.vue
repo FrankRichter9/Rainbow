@@ -1,6 +1,6 @@
 <template>
     <article class="Article Key_article">
-        <p class="header_link">Ключи &rarr;</p>
+        <p class="header_link">{{title}}</p>
         <div class="sortings">
             <p class="none">Сортировать:</p>
             <p>По популярности</p>
@@ -8,7 +8,11 @@
         </div>
         <section class="cards">
             <ul class="card_list">
-                <ProductCard v-for="i in 16" />
+                <ProductCard 
+                    v-for="i in 16"
+                    v-bind:key="i"
+                    @open="open"
+                     />
             </ul>
         </section>
     </article>
@@ -18,11 +22,17 @@
 import ProductCard from "@/components/ProductCard"
 
 export default {
+    props: ['title', 'type'],
     data() {
         return {}
     },
     components: {
         ProductCard,
+    },
+    methods:{
+        open: function(id = 0) {
+            this.$emit("open", id)
+        },
     },
 }
 </script>

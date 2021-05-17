@@ -8,7 +8,7 @@
       <AccountItems @open="openpopup" />
     </main>
     <Footer />
-    <PopupItem :openId="openPopupId" @close="closePopup"/>
+    <PopupItem />
   </div>
 </template>
 
@@ -24,7 +24,7 @@ import PopupItem from '@/components/popups/PopupItem'
 export default {
   data(){
     return {
-      openPopupId: -1
+
     }
   },
 
@@ -40,12 +40,7 @@ export default {
     PopupItem,
   },
   methods: {
-    openpopup: function(id){
-      this.openPopupId = id
-    },
-    closePopup(){
-      this.openPopupId = '-1'
-    }
+    
   }
 }
 </script>

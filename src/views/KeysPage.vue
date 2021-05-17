@@ -1,7 +1,9 @@
 <template>
     <div>
         <Header />
-        <KeysFullList />
+        <main>
+            <KeysFullList :title="'Ключи'" />
+        </main>
         <Footer />
     </div>
 </template>

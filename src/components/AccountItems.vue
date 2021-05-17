@@ -1,9 +1,12 @@
 <template>
     <article class="Article Account_article">
-        <p class="header_link">Аккаунты &rarr;</p>
+        <router-link class="link" to="/accounts">
+            <p class="header_link">Аккаунты &rarr;</p>
+        </router-link>
+        
         <section class="cards">
             <ul>
-                <ProductCard @open="open" v-for="i in 4" v-bind:key="i"/>
+                <ProductCard v-for="i in 4" v-bind:key="i"/>
             </ul>
         </section>
     </article>
@@ -23,9 +26,13 @@ export default {
         ProductCard,
     },
     methods: {
-        open: function(id = 0){
-            this.$emit('open', id)
-        },
+        
     }
 }
 </script>
+
+<style scoped>
+.link{
+    text-decoration: none;
+}
+</style>

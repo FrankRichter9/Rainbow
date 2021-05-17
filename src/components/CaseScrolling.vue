@@ -6,19 +6,19 @@
             <div class="border"></div>
             <div class="scroling">
                 <div>
-                    <img src="@/assets/img/case/2.jpg" alt="" width="334px" height="160px">
+                    <img src="@/assets/img/case/2.png" alt="" width="334px" height="160px">
                 </div>
                 <div>
-                    <img src="@/assets/img/case/2.jpg" alt="" width="334px" height="160px">
+                    <img src="@/assets/img/case/2.png" alt="" width="334px" height="160px">
                 </div>
                 <div>
-                    <img src="@/assets/img/case/1.jpg" alt="" width="334px" height="160px">
+                    <img src="@/assets/img/case/1.png" alt="" width="334px" height="160px">
                 </div>
                 <div>
-                    <img src="@/assets/img/case/2.jpg" alt="" width="334px" height="160px">
+                    <img src="@/assets/img/case/2.png" alt="" width="334px" height="160px">
                 </div>
                 <div>
-                    <img src="@/assets/img/case/2.jpg" alt="" width="334px" height="160px">
+                    <img src="@/assets/img/case/2.png" alt="" width="334px" height="160px">
                 </div>
             </div>
             <div class="border"></div>
