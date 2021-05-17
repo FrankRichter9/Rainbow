@@ -37,10 +37,22 @@
                         <span class="label">Гарантия</span>
 
                         <div class="radio">
-                            <div>Без</div>
-                            <div>Неделя</div>
-                            <div>Месяц</div>
-                            <div>Год</div>
+                            <div 
+                                :class="{active_radio: form.radio === 'no'}" 
+                                @click="form.radio = 'no'"
+                            >Без</div>
+                            <div 
+                                :class="{active_radio: form.radio === 'week'}" 
+                                @click="form.radio = 'week'"
+                            >Неделя</div>
+                            <div 
+                                :class="{active_radio: form.radio === 'month'}" 
+                                @click="form.radio = 'month'"
+                            >Месяц</div>
+                            <div 
+                                :class="{active_radio: form.radio === 'year'}" 
+                                @click="form.radio = 'year'"
+                            >Год</div>
                         </div>
                     </section>
                     
@@ -48,26 +60,34 @@
 
                     <label for="">
                         <span class="label">Email</span>    
-                        <input type="email" name="" id="" placeholder="Введите email">
+                        <input type="email" name=""  placeholder="Введите email" v-model="form.email">
                     </label>
 
                     <label for="promo">
                        <span class="label">Промокод</span>   
                     </label>
                     <div class="flex">
-                        <input type="text" name="" id="promo" placeholder="Введите промокод">
+                        <input type="text" name=""  placeholder="Введите промокод" v-model="form.promo">
                         <button type="button">Применить</button>
                     </div>
                     
                     
                     <div class="flex submit_margin">
                         <div class="counter">
-                            <span>-</span>
-                            <span>1</span>
-                            <span>+</span>
+                            <span
+                                @click="form.counter - 1 > 0 ? form.counter-- : {}"
+                            >-</span>
+                            <span>{{form.counter}}</span>
+                            <span
+                                @click="form.counter++"
+                            >+</span>
                         </div>
 
-                        <button type="button" class="submit">Купить за 169 ₽</button>
+                        <button 
+                            type="button" 
+                            class="submit"
+                            @click="getObject"
+                        >Купить за 169 ₽</button>
                     </div>
             </section>
         </section>
@@ -80,6 +100,12 @@ export default {
         return {
             popup: {
                 active: false
+            },
+            form: {
+                radio:'no',
+                email: '',
+                promo: '',
+                counter: 1,
             }
         }
     },
@@ -92,12 +118,17 @@ export default {
     methods: {
         close(){
            this.$emit('close')
+        },
+        getObject(){
+            console.log(this.form)
         }
     }
 }
 </script>
 
 <style scoped>
+
+    
     
     button{
         padding: 0;
@@ -252,12 +283,18 @@ export default {
         font-weight: 500;
         font-size: 15px;
         line-height: 18px;
-
         border-radius: 30px;
         padding: 15px 26px;
-        /* border: 1px solid red; */
         cursor: pointer;
+
+        box-sizing: border-box;
     }
+
+    .active_radio {
+        border: 1px solid #f00;
+    }
+
+    
 
     /* promocode */
 
@@ -295,6 +332,8 @@ export default {
 
         box-sizing: border-box;
         padding: 20px;
+
+        user-select: none;
     }
 
     .flex .submit{
@@ -327,10 +366,17 @@ export default {
         cursor: pointer;
     }
 
+    .active_radio{
+        border: ;
+    }
+
     .submit_margin{
         margin: 22px 0 50px 0;
     }
 
+    input{
+        outline: none;
+    }
 
     @media screen and (max-width: 1024px)  {
         .popup_body{

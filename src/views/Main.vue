@@ -3,9 +3,9 @@
     <Header />
     <main>
       <MainProducts />
-      <NewItems @open="openpopup"/>
-      <KeyItems @open="openpopup"/>
-      <AccountItems @open="openpopup" />
+      <NewItems />
+      <KeyItems />
+      <AccountItems />
     </main>
     <Footer />
     <PopupItem />
