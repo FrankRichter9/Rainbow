@@ -343,12 +343,14 @@ export default {
         }
 
         .info, .form{
+            box-sizing: border-box;
             width: 100%;
             
         }
         
         .popup{
-            overflow: scroll;
+            overflow-y: scroll;
+            width: 100%;
         }
 
         .info .title{
@@ -356,9 +358,9 @@ export default {
         }
 
         .info .text{
-            width: 90%;
+            width: 100%;
             height: 300px;
-            overflow: scroll;
+            overflow-y: scroll;
             text-overflow: ellipsis
 
         }
@@ -383,6 +385,19 @@ export default {
         .counter{
             display: flex;
             justify-content: space-between;
+        }
+
+        .radio div{
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+
+            border-radius: 30px;
+            padding: 15px 15px;
+            /* border: 1px solid red; */
+            cursor: pointer;
         }
 
 

@@ -1,6 +1,6 @@
 <template>
     <li>
-        <a href="">
+        <router-link class="link" to="/case">
             <div class="Main_card">
                 <div class="reletive">
                     <div class="vignette">
@@ -11,7 +11,7 @@
                     </p>
                 </div>
             </div>
-        </a>
+        </router-link>
     </li>
 </template>
 

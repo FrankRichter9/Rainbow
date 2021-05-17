@@ -2,8 +2,7 @@
     <li>
         <a href="#">
             <div class="Main_card"
-                v-on:mouseover="activation()" 
-                v-on:mouseout="active = false"
+               
                 :class="{
                     Main_card_1: index + 1 === 1,
                     Main_card_2: index + 1 === 2,
@@ -12,8 +11,7 @@
                 >
                 <div class="reletive">
                     <div
-                        class="vignette" 
-                        :class="{blur: active}"
+                        class="vignette blur"
                         >
                         <img 
                             src="@/assets/img/image1.png" 
@@ -22,19 +20,15 @@
                     </div>
                     <section class="Card_text">
                         <p 
-                            class="main_card_name"
-                            :class="{main_card_name_active: active}"
-                            >
+                            class="main_card_name main_card_name_active">
                             Основной товар  
                         </p>
-                        <p class="main_card_description"
-                            :class="{display_block: active}"
-                        >
+                        <p class="main_card_description display_block">
                             Самый бюджетный вариант для игры на лицензионных серверах.
                         </p>
-                        <router-link class="button" to='/'
-                            :class="{display_block: active}"
-                        >Купить за 69 ₽ →</router-link>
+                        <router-link class="button display_block" to='/'>
+                            Купить за 69 ₽ →
+                        </router-link>
                     </section>
                 </div>
             </div>
@@ -43,19 +37,18 @@
 </template>
 
 
+
+
 <script>
 
 export default {
     props: ['index'],
     data(){
         return {
-            active: false,
         }
     },
     methods: {
-        activation(){
-            if(document.documentElement.clientWidth > 1024)this.active = true
-        }
+        
     },
 
 }
@@ -214,18 +207,18 @@ li:first-child{
 /* active */
 
 
-.display_block{
+.Main_card:hover .display_block{
     position: relative;
     z-index: 3;
     display: block;
 }
 
-.blur{
+.Main_card:hover .blur{
     transition: .4s;
     filter: blur(5px);
 }
 
-.main_card_name_active{
+.Main_card:hover .main_card_name_active{
     transition: .3s;
     position: relative;
     z-index: 3;
@@ -234,6 +227,24 @@ li:first-child{
 
 
 @media screen and (max-width: 1024px)  {
+    .Main_card:hover .display_block{
+        position: relative;
+        z-index: 3;
+        display: block;
+    }
+
+    .Main_card:hover .blur{
+        filter: none;
+    }
+
+    .Main_card:hover .main_card_name_active{
+        position: relative;
+        z-index: 3;
+        margin: 10% 0 0 8.771929824561404%;
+    }
+
+
+
     .Main_card{
         background-color: #6BF854;
 
@@ -262,17 +273,50 @@ li:first-child{
         content: none;
 
     }
-    .vignette:after {
+    .Main_card_1 .vignette:after, .Main_card_2 .vignette:after, .Main_card_3 .vignette:after {
+        content: none;
+    }
+    
+    .Main_card_1 .vignette:after {
         content: "";
         display: block;
         background-color: red;
         width: 100%;
-        height: 62.5%;
+        height: 370px;
         position: absolute;
         top: 0;
         left: 0;
         background: radial-gradient(ellipse at center, rgba(107, 248, 84, 0) 0%,rgba(107, 248, 84, 1) 70%,rgba(107, 248, 84, 100%));
-        border-radius: 10%;
+        border-radius: 1%;
+        z-index: 1;
+    }
+
+    .Main_card_2 .vignette:after {
+        content: "";
+        display: block;
+        background-color: red;
+        width: 100%;
+        height: 370px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: radial-gradient(ellipse at center, rgba(137, 54, 243, 0) 0%,rgba(137, 54, 243, 1) 70%,rgba(137, 54, 243, 100%));
+        border-radius: 1%;
+        z-index: 1;
+    }
+
+
+    .Main_card_3 .vignette:after {
+        content: "";
+        display: block;
+        background-color: red;
+        width: 100%;
+        height: 370px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: radial-gradient(ellipse at center, rgba(255, 187, 55, 0) 0%,rgba(255, 187, 55, 1) 70%,rgba(255, 187, 55, 100%));
+        border-radius: 1%;
         z-index: 1;
     }
     li{
