@@ -1,32 +1,30 @@
 <template>
     <li>
         <a href="#">
-            <div class="Main_card"
-               
+            <div
+                class="Main_card"
                 :class="{
                     Main_card_1: index + 1 === 1,
                     Main_card_2: index + 1 === 2,
-                    Main_card_3: index + 1 === 3 
+                    Main_card_3: index + 1 === 3,
                 }"
-                >
+            >
                 <div class="reletive">
-                    <div
-                        class="vignette blur"
-                        >
-                        <img 
-                            src="@/assets/img/image1.png" 
+                    <div class="vignette blur">
+                        <img
+                            src="@/assets/img/image1.png"
                             alt="Основной товар"
-                            >
+                        />
                     </div>
                     <section class="Card_text">
-                        <p 
-                            class="main_card_name main_card_name_active">
-                            Основной товар  
+                        <p class="main_card_name main_card_name_active">
+                            ОСНОВНОЙ ТОВАР
                         </p>
                         <p class="main_card_description display_block">
-                            Самый бюджетный вариант для игры на лицензионных серверах.
+                            Самый бюджетный вариант для игры на лицензионных
+                            серверах.
                         </p>
-                        <router-link class="button display_block" to='/'>
+                        <router-link class="button display_block" to="/">
                             Купить за 69 ₽ →
                         </router-link>
                     </section>
@@ -36,33 +34,21 @@
     </li>
 </template>
 
-
-
-
 <script>
-
 export default {
-    props: ['index'],
-    data(){
-        return {
-        }
+    props: ["index"],
+    data() {
+        return {}
     },
-    methods: {
-        
-    },
-
+    methods: {},
 }
 </script>
 
-
-
-
-
 <style scoped>
-a{
+a {
     text-decoration: none;
 }
-.button{
+.button {
     text-decoration: none;
     display: block;
     width: 235px;
@@ -70,7 +56,7 @@ a{
 
     margin: 0 auto;
 
-    background: #EB5050;
+    background: #eb5050;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
 
@@ -80,25 +66,25 @@ a{
 
     font-family: Inter;
     font-style: normal;
-    font-weight: 600;
     font-size: 14px;
     line-height: 17px;
 
     display: none;
 }
-
-
-.main_card_name{
-    font-family: Inter;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    margin: 8.771929824561404%;
-
+.button:hover {
+    background: #ff7070;
 }
 
-.main_card_description{
+.main_card_name {
+    font-family: Inter-BoldItalic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 25px 25px;
+}
+
+.main_card_description {
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
@@ -109,37 +95,35 @@ a{
     display: none;
 }
 
-
-li{
+li {
     display: block;
 
     margin: 0 0 0 2.18978102189781%;
 }
-li:first-child{
+li:first-child {
     margin: 0;
 }
 
-.Main_card{
-
+.Main_card {
     width: 285px;
     height: 450px;
-
+    border-radius: 4px;
     overflow: hidden;
 }
 
-.Main_card_1{
-    background-color: #6BF854;
+.Main_card_1 {
+    background-color: #6bf854;
 }
 
-.Main_card_2{
-    background-color: #8936F3;
+.Main_card_2 {
+    background-color: #8936f3;
 }
 
-.Main_card_3{
-    background-color: #FFBB37;
+.Main_card_3 {
+    background-color: #ffbb37;
 }
 
-.reletive{
+.reletive {
     position: relative;
 }
 
@@ -151,15 +135,15 @@ li:first-child{
     width: 100%;
     display: block;
     box-sizing: border-box;
-    border:1px solid rgba(107, 248, 84, 1);
+    border: 1px solid rgba(107, 248, 84, 1);
 }
 
-.Main_card_2 .vignette img{
-    border:1px solid #8936F3;
+.Main_card_2 .vignette img {
+    border: 1px solid #8936f3;
 }
 
-.Main_card_3 .vignette img{
-    border:1px solid #FFBB37;
+.Main_card_3 .vignette img {
+    border: 1px solid #ffbb37;
 }
 
 .Main_card_1 .vignette:after {
@@ -171,7 +155,12 @@ li:first-child{
     position: absolute;
     top: 0;
     left: 0;
-    background: radial-gradient(ellipse at center, rgba(107, 248, 84, 0) 0%,rgba(107, 248, 84, 1) 70%,rgba(107, 248, 84, 100%));
+    background: radial-gradient(
+        ellipse at center,
+        rgba(107, 248, 84, 0) 0%,
+        rgba(107, 248, 84, 1) 70%,
+        rgba(107, 248, 84, 100%)
+    );
     border-radius: 50%;
     z-index: 1;
 }
@@ -185,7 +174,12 @@ li:first-child{
     position: absolute;
     top: 0;
     left: 0;
-    background: radial-gradient(ellipse at center, rgba(137, 54, 243, 0) 0%,rgba(137, 54, 243, 1) 70%,rgba(137, 54, 243, 100%));
+    background: radial-gradient(
+        ellipse at center,
+        rgba(137, 54, 243, 0) 0%,
+        rgba(137, 54, 243, 1) 70%,
+        rgba(137, 54, 243, 100%)
+    );
     border-radius: 50%;
     z-index: 1;
 }
@@ -199,54 +193,55 @@ li:first-child{
     position: absolute;
     top: 0;
     left: 0;
-    background: radial-gradient(ellipse at center, rgba(255, 187, 55, 0) 0%,rgba(255, 187, 55, 1) 70%,rgba(255, 187, 55, 100%));
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 187, 55, 0) 0%,
+        rgba(255, 187, 55, 1) 70%,
+        rgba(255, 187, 55, 100%)
+    );
     border-radius: 50%;
     z-index: 1;
 }
 
 /* active */
 
-
-.Main_card:hover .display_block{
+.Main_card:hover .display_block {
     position: relative;
     z-index: 3;
     display: block;
 }
 
-.Main_card:hover .blur{
-    transition: .4s;
+.Main_card:hover .blur {
+    transition: 0.4s;
     filter: blur(5px);
 }
 
-.Main_card:hover .main_card_name_active{
-    transition: .3s;
+.Main_card:hover .main_card_name_active {
+    transition: 0.3s;
     position: relative;
     z-index: 3;
     margin: -30% 0 0 8.771929824561404%;
 }
 
-
-@media screen and (max-width: 1024px)  {
-    .Main_card:hover .display_block{
+@media screen and (max-width: 1024px) {
+    .Main_card:hover .display_block {
         position: relative;
         z-index: 3;
         display: block;
     }
 
-    .Main_card:hover .blur{
+    .Main_card:hover .blur {
         filter: none;
     }
 
-    .Main_card:hover .main_card_name_active{
+    .Main_card:hover .main_card_name_active {
         position: relative;
         z-index: 3;
         margin: unset;
     }
 
-
-
-    .Main_card{
-        background-color: #6BF854;
+    .Main_card {
+        background-color: #6bf854;
 
         width: 300px;
         height: 200px;
@@ -256,13 +251,14 @@ li:first-child{
         overflow: hidden;
     }
 
-    .main_card_description, .main_card_name, .button{
+    .main_card_description,
+    .main_card_name,
+    .button {
         display: block;
         position: relative;
         top: -370px !important;
         z-index: 10;
     }
-    
 
     .vignette img {
         width: 100%;
@@ -271,12 +267,13 @@ li:first-child{
 
     .vignette:after {
         content: none;
-
     }
-    .Main_card_1 .vignette:after, .Main_card_2 .vignette:after, .Main_card_3 .vignette:after {
+    .Main_card_1 .vignette:after,
+    .Main_card_2 .vignette:after,
+    .Main_card_3 .vignette:after {
         content: none;
     }
-    
+
     .Main_card_1 .vignette:after {
         content: "";
         display: block;
@@ -286,7 +283,12 @@ li:first-child{
         position: absolute;
         top: 0;
         left: 0;
-        background: radial-gradient(ellipse at center, rgba(107, 248, 84, 0) 0%,rgba(107, 248, 84, 1) 70%,rgba(107, 248, 84, 100%));
+        background: radial-gradient(
+            ellipse at center,
+            rgba(107, 248, 84, 0) 0%,
+            rgba(107, 248, 84, 1) 70%,
+            rgba(107, 248, 84, 100%)
+        );
         border-radius: 1%;
         z-index: 1;
     }
@@ -300,11 +302,15 @@ li:first-child{
         position: absolute;
         top: 0;
         left: 0;
-        background: radial-gradient(ellipse at center, rgba(137, 54, 243, 0) 0%,rgba(137, 54, 243, 1) 70%,rgba(137, 54, 243, 100%));
+        background: radial-gradient(
+            ellipse at center,
+            rgba(137, 54, 243, 0) 0%,
+            rgba(137, 54, 243, 1) 70%,
+            rgba(137, 54, 243, 100%)
+        );
         border-radius: 1%;
         z-index: 1;
     }
-
 
     .Main_card_3 .vignette:after {
         content: "";
@@ -315,14 +321,17 @@ li:first-child{
         position: absolute;
         top: 0;
         left: 0;
-        background: radial-gradient(ellipse at center, rgba(255, 187, 55, 0) 0%,rgba(255, 187, 55, 1) 70%,rgba(255, 187, 55, 100%));
+        background: radial-gradient(
+            ellipse at center,
+            rgba(255, 187, 55, 0) 0%,
+            rgba(255, 187, 55, 1) 70%,
+            rgba(255, 187, 55, 100%)
+        );
         border-radius: 1%;
         z-index: 1;
     }
-    li{
+    li {
         margin: 0;
     }
-
 }
-
 </style>

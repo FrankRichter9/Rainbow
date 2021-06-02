@@ -50,7 +50,7 @@ a{
 ul{
     box-sizing: border-box;
     display: flex;
-    margin: 50px 10% 0 10%;
+    margin: 45px 10% 0 10%;
     list-style: none;
 }
 .footer{
@@ -64,7 +64,7 @@ li{
     font-family: Inter;
     font-style: normal;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 17px;
     text-align: right;
 }

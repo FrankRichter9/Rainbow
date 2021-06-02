@@ -7,7 +7,7 @@
                         <img src="" alt="Основной товар">
                     </div>
                     <p class="header_link">
-                        Промокод
+                        ПРОМОКОД
                     </p>
                 </div>
             </div>
@@ -27,6 +27,7 @@ a{
 
     width: 285px;
     height: 210px;
+    border-radius: 4px;
 
 }
 li{
