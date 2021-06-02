@@ -42,14 +42,24 @@
             </section>
             <label for="">
                 <span class="label">Email</span>
-                <input type="email" placeholder="Введите email" />
+                <input
+                    type="email"
+                    placeholder="Введите email"
+                    :class="{ focus_state: isFocus === 'email' }"
+                    @click="isFocus = 'email'"
+                />
             </label>
 
             <label for="promo">
                 <span class="label">Промокод</span>
             </label>
             <div class="flex">
-                <input type="text" placeholder="Введите промокод" />
+                <input
+                    type="text"
+                    placeholder="Введите промокод"
+                    :class="{ focus_state: isFocus === 'promo' }"
+                    @click="isFocus = 'promo'"
+                />
                 <button type="button">Применить</button>
             </div>
 
@@ -72,6 +82,7 @@ export default {
         return {
             count: 1,
             isActive: "no",
+            isFocus: "no",
         }
     },
 }
@@ -249,7 +260,12 @@ input {
     bottom: 0;
     border-radius: 50px;
     padding: 2px;
-    background: linear-gradient(90deg, rgba(255,187,55,1) 0%, rgba(137,54,243,1) 50%, rgba(106,248,84,1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 187, 55, 1) 0%,
+        rgba(137, 54, 243, 1) 50%,
+        rgba(106, 248, 84, 1) 100%
+    );
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
@@ -259,9 +275,15 @@ input {
         display: none;
 }
 
-/* .active {
-    border: 1px solid red;
-} */
+.focus_state {
+    border: 1px solid #ffffff;
+}
+.success_state {
+    border: 1px solid #3de959;
+}
+.error_state {
+    border: 1px solid #fa4339;
+}
 
 @media only screen and (max-width: 480px) {
     .form {

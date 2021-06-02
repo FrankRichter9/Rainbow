@@ -70,8 +70,8 @@ a{
 .logo_text{
     font-family: Inter;
     font-style: normal;
-    font-size: 14px;
-    margin: 49px 0 0 0;
+    font-size: 24px;
+    margin: 39px 0 0 10px;
 }
 
 .main_menu{

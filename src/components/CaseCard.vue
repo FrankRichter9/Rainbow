@@ -7,7 +7,7 @@
                         <img src="" alt="Основной товар">
                     </div>
                     <p>
-                        Кейс    
+                        КЕЙС    
                     </p>
                 </div>
             </div>
@@ -40,7 +40,7 @@ li{
         height: 200px;
 
         margin: 6.25% auto;
-
+        border-radius: 4px;
         overflow: hidden;
     }
 

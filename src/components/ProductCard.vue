@@ -1,6 +1,6 @@
 <template>
     <li>
-        <div class="card">
+        <div class="card" @click.prevent="openPopupId = 1">
             <div class="reletive">
                 <div class="vignette">
                     <img src="@/assets/img/gta.png" alt="Название">
@@ -10,7 +10,7 @@
             <span class="card_name">Need for Speed: Most Wanted</span>
             <div class="flex">
                 <span class="card_price">1119 ₽</span>
-                <a href="#" class="button" @click.prevent="openPopupId = 1">	&#8250;</a>
+                <a href="#" class="button">	&#8250;</a>
             </div>
         </div>
 
@@ -45,6 +45,7 @@ export default {
 
     background: #FFFFFF;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 img{
@@ -52,6 +53,7 @@ img{
     height: 240px;
     display: block;
     margin: 0 auto;
+    padding-top: 4px;
 }
 .reletive{
     position: relative;
@@ -61,7 +63,7 @@ img{
     display: block;
     background-color: red;
     width: 100%;
-    height: 240px;
+    height: 245px;
     position: absolute;
     top: 0;
     left: 0;
@@ -116,6 +118,10 @@ img{
     border-radius: 30px;
 
     margin: 5.263157894736842% 7.017543859649123% 0 8.771929824561404%;
+}
+
+.button:hover{
+    background: #FF7070;
 }
 
 .flex{
