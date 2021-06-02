@@ -240,7 +240,7 @@ li:first-child{
     .Main_card:hover .main_card_name_active{
         position: relative;
         z-index: 3;
-        margin: 10% 0 0 8.771929824561404%;
+        margin: unset;
     }
 
 

@@ -14,35 +14,50 @@
                 <span class="label">Гарантия</span>
 
                 <div class="radio">
-                    <div :class="{active:isActive === 'no'}" @click="isActive = 'no'">Без</div>
-                    <div :class="{active:isActive === 'week'}" @click="isActive = 'week'">Неделя</div>
-                    <div :class="{active:isActive === 'month'}" @click="isActive = 'month'">Месяц</div>
-                    <div :class="{active:isActive === 'year'}" @click="isActive = 'year'">Год</div>
+                    <div
+                        :class="{ active: isActive === 'no' }"
+                        @click="isActive = 'no'"
+                    >
+                        Без
+                    </div>
+                    <div
+                        :class="{ active: isActive === 'week' }"
+                        @click="isActive = 'week'"
+                    >
+                        Неделя
+                    </div>
+                    <div
+                        :class="{ active: isActive === 'month' }"
+                        @click="isActive = 'month'"
+                    >
+                        Месяц
+                    </div>
+                    <div
+                        :class="{ active: isActive === 'year' }"
+                        @click="isActive = 'year'"
+                    >
+                        Год
+                    </div>
                 </div>
             </section>
             <label for="">
                 <span class="label">Email</span>
-                <input type="email" name="" id="" placeholder="Введите email" />
+                <input type="email" placeholder="Введите email" />
             </label>
 
             <label for="promo">
                 <span class="label">Промокод</span>
             </label>
             <div class="flex">
-                <input
-                    type="text"
-                    name=""
-                    id="promo"
-                    placeholder="Введите промокод"
-                />
+                <input type="text" placeholder="Введите промокод" />
                 <button type="button">Применить</button>
             </div>
 
             <div class="flex submit_margin">
                 <div class="counter">
-                    <span @click = "count > 1 ? count--:count">-</span>
-                    <span>{{count}}</span>
-                    <span @click = "count++">+</span>
+                    <span @click="count > 1 ? count-- : count">-</span>
+                    <span>{{ count }}</span>
+                    <span @click="count++">+</span>
                 </div>
 
                 <button type="button" class="submit">Купить за 169 ₽</button>
@@ -53,12 +68,12 @@
 
 <script>
 export default {
-    data(){
-        return{
-            count:1,
-            isActive:'no'
+    data() {
+        return {
+            count: 1,
+            isActive: "no",
         }
-    }
+    },
 }
 </script>
 
@@ -71,6 +86,7 @@ button {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
 .form {
     color: #fff;
 }
@@ -221,10 +237,28 @@ input {
 .submit_margin {
     margin: 50px 0 50px 0;
 }
-
 .active {
-    border:1px solid red;
+    position: relative;
 }
+.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    padding: 2px;
+    background: linear-gradient(90deg, rgba(255,187,55,1) 0%, rgba(137,54,243,1) 50%, rgba(106,248,84,1) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+/* .active {
+    border: 1px solid red;
+} */
 
 @media only screen and (max-width: 480px) {
     .form {
