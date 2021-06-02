@@ -81,6 +81,9 @@
                             @click="form.radio = 'year'"
                         >
                             Год
+                                <img src="@/assets/img/123.png" alt="" class="percent">
+                            
+                            
                         </div>
                     </div>
                 </section>
@@ -160,6 +163,10 @@ export default {
 </script>
 
 <style scoped>
+.percent{
+    margin: -25px 0 0 5px;
+    position: absolute;
+}
 button {
     padding: 0;
     border: none;
@@ -209,13 +216,19 @@ button {
 
 .text {
     margin: 2.873715124816446% 0 0 0;
-
+    padding: 0 24.37591776798825% 0 0;
+    height: 443px;
+    overflow-y: scroll;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
 }
+
+.text::-webkit-scrollbar { width: 0; }
+
+
 
 .form {
     color: #fff;
@@ -226,7 +239,7 @@ button {
 }
 
 .price {
-    /* margin: 0 0 0 8.342143906020558%; */
+    margin: 0 0 49px 0;
 
     font-family: Inter;
     font-style: normal;
@@ -336,14 +349,19 @@ input {
     width: 50%;
     background: #f0f1f4;
     border-radius: 30px;
+    cursor: pointer;
 }
-
+.promo button:hover{
+    background: #fff;
+}
 /*  */
-
+.counter span{
+    display: block;
+    width: 20px;
+    text-align: center;
+}
 .counter {
-    /* 
-        height: 50px;
-        width: 100%; */
+    width: 156px;
 
     background: rgba(255, 255, 255, 0.05);
     /* Transparency/White 40% */
@@ -353,8 +371,10 @@ input {
     border-radius: 30px;
 
     box-sizing: border-box;
-    padding: 20px;
+    padding: 16px;
+    display: flex;
 
+    justify-content: space-between;
     user-select: none;
 }
 
@@ -372,6 +392,20 @@ input {
     color: #fff;
 }
 
+
+
+.counter span:first-child,
+.counter span:nth-child(3) {
+    margin: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.counter span:first-child:hover,
+.counter span:nth-child(3):hover {
+    font-size: 20px;
+}
+
 .counter span {
     margin: 0 10px;
 
@@ -382,15 +416,8 @@ input {
     line-height: 19px;
 }
 
-.counter span:first-child,
-.counter span:nth-child(3) {
-    margin: 0 15px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
 .submit_margin {
-    margin: 22px 0 50px 0;
+    margin: 50px 0 50px 0;
 }
 
 input {
@@ -423,6 +450,13 @@ input {
 }
 
 @media screen and (max-width: 1024px) {
+    .percent{
+        margin: -25px 5px 0 0;
+        position: absolute;
+    }
+    .counter{
+        width: 100%;
+    }
     .popup_body {
         margin: 0;
         flex-direction: column;

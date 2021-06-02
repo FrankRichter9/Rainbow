@@ -222,7 +222,7 @@ li:first-child{
     transition: .3s;
     position: relative;
     z-index: 3;
-    margin: -30% 0 0 8.771929824561404%;
+    margin: -35% 0 0 8.771929824561404%;
 }
 
 

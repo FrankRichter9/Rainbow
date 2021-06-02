@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <article>
         <div class="info">
             <h3 class="info_title">Испытай свою удачу!</h3>
             <p>
@@ -11,7 +11,7 @@
         </div>
         <section class="form">
             <section>
-                <span class="label">Гарантия</span>
+                <span class="label guarantee">Гарантия</span>
 
                 <div class="radio">
                     <div
@@ -63,7 +63,7 @@
                 <button type="button" class="submit">Купить за 169 ₽</button>
             </div>
         </section>
-    </div>
+    </article>
 </template>
 
 <script>
@@ -255,6 +255,9 @@ input {
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
 }
+.radio, .guarantee{
+        display: none;
+}
 
 /* .active {
     border: 1px solid red;
@@ -279,6 +282,9 @@ input {
     .flex .submit {
         width: 100%;
         height: 61px;
+    }
+    .radio, .guarantee{
+        display: flex;
     }
 }
 </style>
