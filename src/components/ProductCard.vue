@@ -135,6 +135,9 @@ export default {
 .button:hover{
     background: #FF7070;
 }
+/* .arrow-white{
+    width: 25%;
+} */
 
 .button:hover .arrow-white{
     margin-left: 3px;
@@ -155,7 +158,7 @@ export default {
     border-radius: 4px;
     cursor: pointer;
 }
-img{
+.game-name{
     width: 212px;
     height: 190px;
     display: block;
@@ -198,7 +201,7 @@ img{
     height: 200px;
 }
 
-.card__small img {
+.card__small .game-name {
     width: 141px;
     height: 134px;
 }
@@ -236,6 +239,10 @@ img{
     font-family: Inter-Bold;
     font-size: 16px;
     margin-top: 0;
+}
+.card__small .arrow-white{
+    width: 5.87px;
+    margin: 0 0 14px 1px;
 }
 
 }
