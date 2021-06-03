@@ -1,9 +1,10 @@
 <template>
+<transition name="fade">
     <article class="popup" v-show="getId">
         <section class="popup_body">
             <section class="info">
                 <div class="title">
-                    Ключ Rainbow Six: Siege Standart {{ openId }}
+                    Ключ Rainbow Six: Siege Standart 
                 </div>
 
                 <div class="text">
@@ -97,8 +98,7 @@
                         name=""
                         placeholder="Введите email"
                         v-model="form.email"
-                        :class="{ focus_state: isFocus === 'email' }"
-                        @click="isFocus = 'email'"
+                        class="input__email"
                     />
                 </label>
 
@@ -111,8 +111,7 @@
                         name=""
                         placeholder="Введите промокод"
                         v-model="form.promo"
-                        :class="{ focus_state: isFocus === 'promo' }"
-                        @click="isFocus = 'promo'"
+                        class="input__promo"
                     />
                     <button type="button">Применить</button>
                 </div>
@@ -134,6 +133,7 @@
             </section>
         </section>
     </article>
+    </transition>
 </template>
 
 <script>
@@ -170,7 +170,20 @@ export default {
 </script>
 
 <style scoped>
-.percent {
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}
+
+
+
+
+.percent{
+
     margin: -25px 0 0 5px;
     position: absolute;
 }
@@ -461,8 +474,11 @@ input {
     mask-composite: exclude;
 }
 
-.focus_state {
-    border: 1px solid #ffffff;
+.input__promo:focus{
+    border: 1px solid #fff;
+}
+.input__email:focus{
+    border: 1px solid #fff;
 }
 .success_state {
     border: 1px solid #3de959;
