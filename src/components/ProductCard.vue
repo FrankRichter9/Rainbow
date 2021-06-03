@@ -5,14 +5,14 @@
         }" @click.prevent="openPopupId = 1">
             <div class="reletive">
                 <div class="vignette">
-                    <img src="@/assets/img/gta.png" alt="Название">
+                    <img class="game-name" src="@/assets/img/gta.png" alt="Название">
                 </div>
             </div>
             
             <span class="card_name">Need for Speed: Most Wanted</span>
             <div class="flex">
                 <span class="card_price">1119 ₽</span>
-                <a href="#" class="button">	&#8250;</a>
+                <a href="#" class="button">	<img src="@/assets/img/arrow-white.png" alt="Стрелочка" class="arrow-white"></a>
             </div>
         </div>
 
@@ -53,13 +53,19 @@ export default {
     cursor: pointer;
 }
 
-img{
+.game-name{
     width: 277px;
     height: 240px;
     display: block;
     margin: 0 auto;
     padding-top: 4px;
 }
+
+.arrow-white{
+    margin-left: 1px;
+}
+
+
 .reletive{
     position: relative;
 }
@@ -110,7 +116,7 @@ img{
     text-decoration: none;
 
     text-align: center;
-    font-size: 35px;
+    font-size: 31px;
 
     width: 45px;
     height: 45px;
@@ -123,10 +129,15 @@ img{
     border-radius: 30px;
 
     margin: 5.263157894736842% 7.017543859649123% 0 8.771929824561404%;
+    
 }
 
 .button:hover{
     background: #FF7070;
+}
+
+.button:hover .arrow-white{
+    margin-left: 3px;
 }
 
 .flex{

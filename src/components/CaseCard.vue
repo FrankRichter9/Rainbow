@@ -24,6 +24,7 @@
     background-image: url("../assets/img/case.png");
     width: 285px;
     height: 210px;
+    border-radius: 4px;
 
     box-sizing: border-box;
     padding: 156px 0 0 0;

@@ -82,9 +82,11 @@
                             @click="form.radio = 'year'"
                         >
                             Год
-                                <img src="@/assets/img/123.png" alt="" class="percent">
-                            
-                            
+                            <img
+                                src="@/assets/img/123.png"
+                                alt=""
+                                class="percent"
+                            />
                         </div>
                     </div>
                 </section>
@@ -169,6 +171,7 @@ export default {
 
 <style scoped>
 
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
@@ -180,6 +183,7 @@ export default {
 
 
 .percent{
+
     margin: -25px 0 0 5px;
     position: absolute;
 }
@@ -193,7 +197,7 @@ button {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color: rgba(0, 0, 0, 0.81);
     z-index: 99;
 }
 
@@ -211,6 +215,9 @@ button {
         ),
         url(../../assets/img/btf_5.jpeg);
     background-size: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 300ms, opacity 300ms;
 }
 
 .info {
@@ -242,9 +249,9 @@ button {
     line-height: 17px;
 }
 
-.text::-webkit-scrollbar { width: 0; }
-
-
+.text::-webkit-scrollbar {
+    width: 0;
+}
 
 .form {
     color: #fff;
@@ -334,6 +341,7 @@ input {
 
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    
 }
 
 .radio div {
@@ -345,6 +353,8 @@ input {
     border-radius: 30px;
     padding: 15px 26px;
     cursor: pointer;
+    width: 102px;
+    text-align: center;
 
     box-sizing: border-box;
 }
@@ -367,11 +377,11 @@ input {
     border-radius: 30px;
     cursor: pointer;
 }
-.promo button:hover{
+.promo button:hover {
     background: #fff;
 }
 /*  */
-.counter span{
+.counter span {
     display: block;
     width: 20px;
     text-align: center;
@@ -408,11 +418,9 @@ input {
     color: #fff;
 }
 
-
-
 .counter span:first-child,
 .counter span:nth-child(3) {
-    margin: 0 15px;
+    margin: 0 10px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -442,6 +450,7 @@ input {
 
 .active_radio {
     position: relative;
+    background-color: #000;
 }
 
 .active_radio::before {
@@ -479,11 +488,11 @@ input {
 }
 
 @media screen and (max-width: 1024px) {
-    .percent{
+    .percent {
         margin: -25px 5px 0 0;
         position: absolute;
     }
-    .counter{
+    .counter {
         width: 100%;
     }
     .popup_body {
