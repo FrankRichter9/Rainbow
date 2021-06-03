@@ -11,6 +11,7 @@
                 <ProductCard 
                     v-for="i in 16"
                     v-bind:key="i"
+                    :type="'small'"
                     @open="open"
                     />
             </ul>
@@ -60,15 +61,18 @@ export default {
     display: inline-block;
     transform: scaleY(0.8);
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
     .card_list {
-        justify-content: center;
+        /* justify-content: center; */
+        width: calc(100% - 24px);
+        margin: 0 12px;
     }
     .none {
         display: none;
     }
     .sortings {
         justify-content: center;
+        margin: 0 0 24px 0;
     }
     .sortings p {
         margin-right: 30px;
@@ -88,5 +92,7 @@ export default {
     .none{
         display: none;
     }
+
+    
 }
 </style>

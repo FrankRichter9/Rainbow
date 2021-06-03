@@ -81,7 +81,7 @@ a {
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    margin: 0 0 25px 25px;
+    margin: 0 40px 25px 25px;
 }
 
 .main_card_description {
@@ -220,7 +220,7 @@ li:first-child {
     transition: 0.3s;
     position: relative;
     z-index: 3;
-    margin: -35% 0 0 8.771929824561404%;
+    margin: -45% 40px 0 8.771929824561404%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -256,7 +256,7 @@ li:first-child {
     .button {
         display: block;
         position: relative;
-        top: -370px !important;
+        top: -340px !important;
         z-index: 10;
     }
 

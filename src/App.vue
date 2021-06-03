@@ -33,6 +33,12 @@ export default {
     font-style: italic;
     font-weight: bold;
 }
+@font-face {
+    font-family: Inter-Bold;
+    src: url(static/Inter-Bold.ttf);
+    font-style: italic;
+    font-weight: bold;
+}
 #app {
     background-color: #0b0b0b;
     background-image: url("assets/img/BG.png");
@@ -81,22 +87,45 @@ article ul {
     flex-wrap: nowrap;
     overflow: auto;
 }
+
+.cards ul{
+    width: 100%;
+    margin: 0;
+}
+@media screen and (max-width: 1440px) {
+.cards ul li {
+    margin: 0 30px 0 0 ;
+}
+
+.cards ul li:last-child {
+    margin: 0;
+}
+}
+
+
 @media screen and (max-width: 1024px) {
     .Article {
         width: 100%;
         margin: 0 auto;
-        margin-bottom: 15.625%;
-        padding: 0;
+        margin-bottom: 50px;
+        padding: 30px 0;
     }
 
     .Article .header_link {
         display: block;
         /* margin: 0 0 9.375% 0 ; */
-        padding: 9.375% 0 9.375% 6.125%;
+        padding: 0 0 30px 20px;
+    }
+    .cards ul{
+        width: calc(100% - 20px);
+        margin: 0 0 0 20px;
+    }
+    .cards ul li {
+        margin: 0 6.125% 0 0 ;
     }
 
-    .cards ul li {
-        margin: 0 0 0 6.125%;
+    .Article p{
+        margin: 0;
     }
 }
 </style>

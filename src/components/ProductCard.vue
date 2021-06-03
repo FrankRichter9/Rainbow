@@ -1,6 +1,8 @@
 <template>
     <li>
-        <div class="card" @click.prevent="openPopupId = 1">
+        <div class="card" :class="{
+            card__small: type === 'small'
+        }" @click.prevent="openPopupId = 1">
             <div class="reletive">
                 <div class="vignette">
                     <img src="@/assets/img/gta.png" alt="Название">
@@ -25,6 +27,9 @@ export default {
     components: {
         PopupItem
     },
+    props: [
+        'type'
+    ],
     data(){
         return {
             openPopupId: -1,
@@ -88,7 +93,7 @@ img{
 .card_price{
     display: block;
 
-    font-family: Inter;
+    font-family: Inter-Bold;
     font-weight: 900;
     font-size: 28px;
     line-height: 34px;
@@ -127,5 +132,100 @@ img{
 .flex{
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px)  {
+
+.card{
+    width: 220px;
+    height: 320px;
+
+    background: #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+img{
+    width: 212px;
+    height: 190px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 4px;
+}
+.vignette:after {
+    content: none;
+}
+.vignette:after {
+    content: "";
+    display: block;
+    background-color: red;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+.card_name{
+    margin: 15px 8.771929824561404% 0 8.771929824561404%;
+}
+.card_price{
+    display: block;
+
+    font-family: Inter-Bold;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+
+    color: #191A1A;
+
+    margin: 20px 0 0 8.771929824561404%;
+}
+/* ////////////////////// */
+
+.card__small{
+    width: 145px;
+    height: 200px;
+}
+
+.card__small img {
+    width: 141px;
+    height: 134px;
+}
+
+.card__small .vignette:after{
+    content: none;
+}
+
+.card__small .vignette:after {
+    content: "";
+    display: block;
+    background-color: red;
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 10;
+    
+}
+.card__small .card_name{
+    position: relative;
+    z-index: 20;
+    margin-top: -10px;
+    font-size: 14px;
+}
+.card__small .button{
+    width: 24px;
+    height: 24px;
+
+    margin: 5px 8px 0 0;
+}
+.card__small .card_price{
+    font-family: Inter-Bold;
+    font-size: 16px;
+    margin-top: 0;
+}
+
 }
 </style>

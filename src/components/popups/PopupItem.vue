@@ -1,9 +1,10 @@
 <template>
+<transition name="fade">
     <article class="popup" v-show="getId">
         <section class="popup_body">
             <section class="info">
                 <div class="title">
-                    Ключ Rainbow Six: Siege Standart {{ openId }}
+                    Ключ Rainbow Six: Siege Standart 
                 </div>
 
                 <div class="text">
@@ -130,6 +131,7 @@
             </section>
         </section>
     </article>
+    </transition>
 </template>
 
 <script>
@@ -166,6 +168,17 @@ export default {
 </script>
 
 <style scoped>
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}
+
+
+
+
 .percent{
     margin: -25px 0 0 5px;
     position: absolute;
