@@ -95,8 +95,7 @@
                         name=""
                         placeholder="Введите email"
                         v-model="form.email"
-                        :class="{ focus_state: isFocus === 'email' }"
-                        @click="isFocus = 'email'"
+                        class="input__email"
                     />
                 </label>
 
@@ -109,8 +108,7 @@
                         name=""
                         placeholder="Введите промокод"
                         v-model="form.promo"
-                        :class="{ focus_state: isFocus === 'promo' }"
-                        @click="isFocus = 'promo'"
+                        class="input__promo"
                     />
                     <button type="button">Применить</button>
                 </div>
@@ -454,8 +452,11 @@ input {
     mask-composite: exclude;
 }
 
-.focus_state {
-    border: 1px solid #ffffff;
+.input__promo:focus{
+    border: 1px solid #fff;
+}
+.input__email:focus{
+    border: 1px solid #fff;
 }
 .success_state {
     border: 1px solid #3de959;

@@ -45,8 +45,7 @@
                 <input
                     type="email"
                     placeholder="Введите email"
-                    :class="{ focus_state: isFocus === 'email' }"
-                    @click="isFocus = 'email'"
+                    class="input__email"
                 />
             </label>
 
@@ -57,8 +56,7 @@
                 <input
                     type="text"
                     placeholder="Введите промокод"
-                    :class="{ focus_state: isFocus === 'promo' }"
-                    @click="isFocus = 'promo'"
+                    class="input__promo"
                 />
                 <button type="button">Применить</button>
             </div>
@@ -275,8 +273,14 @@ input {
         display: none;
 }
 
-.focus_state {
+/* .focus_state {
     border: 1px solid #ffffff;
+} */
+.input__promo:focus{
+    border: 1px solid #fff;
+}
+.input__email:focus{
+    border: 1px solid #fff;
 }
 .success_state {
     border: 1px solid #3de959;
