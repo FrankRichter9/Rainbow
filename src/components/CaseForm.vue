@@ -155,7 +155,6 @@ input {
 
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    justify-content: space-between;
     user-select: none;
 }
 
@@ -170,6 +169,8 @@ input {
     padding: 15px 26px;
     /* border: 1px solid red; */
     cursor: pointer;
+    width: 102px;
+    text-align: center;
 }
 
 /* promocode */
@@ -250,6 +251,7 @@ input {
 }
 .active {
     position: relative;
+    background-color: #000;
 }
 .active::before {
     content: "";

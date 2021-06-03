@@ -55,6 +55,7 @@ a {
     box-sizing: border-box;
     padding: 5.109489051094891%;
     background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
 }
 
 .Article p {

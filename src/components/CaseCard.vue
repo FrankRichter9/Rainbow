@@ -21,6 +21,7 @@
 
     width: 285px;
     height: 210px;
+    border-radius: 4px;
 }
 
 a{
