@@ -21,8 +21,10 @@
                 </router-link>
             </section>
             
-            <span class="designer">
-                Designed by DivineDsgn
+
+            <span class="design-name designer">
+                Designed by DivineDSGN
+
             </span>
         </section>
     </footer>
@@ -46,12 +48,13 @@ export default {
 footer{
     display: flex;
     justify-content: space-between;
+    margin-top: 140px;
 }
 a{
     text-decoration: none;
 }
 .logo{
-    margin: 0 72.291666666666667% 0 0;
+    margin: 0 72.291666666666667% 33px 0;
 }
 a{
     text-decoration: none;
@@ -62,12 +65,14 @@ a{
 
 .logo img{
     margin: 10.5px 0 0 5%;
+    width: 60px;
+    height: 60px;
 }
 .logo_text{
     font-family: Inter;
     font-style: normal;
     font-size: 14px;
-    margin: 49px 7.291666666666667% 0 0;
+    margin: 33px 7.291666666666667% 0 0;
 }
 ul{
     margin: 0;
@@ -81,14 +86,28 @@ ul{
     line-height: 16px;
 
     max-width: 700px;
+
     margin: 3.263888888888889% 20px 6.180555555555556% 20px;
 }
+.footer_logo{
+    margin: 4% 7.291666666666667% 0 0;
+}
 
+.design-name{
+    font-family: Inter;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin-left: 11px;
+ }
+ 
 .footer_logo{
     margin: 0 7.291666666666667% 40px 0;
 }
 .footer_nav nav .footer{
     margin: 0 0 0 20px !important;
+
 }
 
 
