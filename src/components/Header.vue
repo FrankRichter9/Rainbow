@@ -15,12 +15,15 @@
             <span 
                 class="mobile_menu"
                 @click="activeNav = !activeNav"
+                
                 >
                 &equiv;
             </span>
             <MainNav 
                 class="main_nav"
                 :class="{display_block: activeNav}"
+                :activeNav="activeNav"
+                @close="activeNav = !activeNav"
                 />
         </section>
     </header>
@@ -120,6 +123,12 @@ a{
     .display_block{
         display: block;
     }
+
+    .main_nav.display_block ul{
+        margin: 0 0 0 20px;
+    }
+
+    
 }
 
 

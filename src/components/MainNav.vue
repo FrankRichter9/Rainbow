@@ -6,6 +6,11 @@
                 }"
                 
                 >
+                <li v-show="activeNav" class="close-button"
+                    @click="$emit('close', null)"
+                >
+                    &times;
+                </li>
                 <li>
                     <a href="#">
                         Youtube канал
@@ -35,6 +40,7 @@
 export default {
     props: [
             'footer',
+            'activeNav',
             ],
 }
 </script>
@@ -43,6 +49,7 @@ export default {
 
 
 <style scoped>
+
 a{
     text-decoration: none;
 }
@@ -50,24 +57,28 @@ a{
 ul{
     box-sizing: border-box;
     display: flex;
-    margin: 45px 10% 0 10%;
+    margin: 0 0 0 10%;
     list-style: none;
 }
 .footer{
-    margin: 50px 0 0 7.291666666666667%;
+    margin: 50px 0 0 20px;
 }
 
 li{
     width: 20%;
     display: block;
-
+    
     font-family: Inter;
     font-style: normal;
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
-    text-align: right;
+    text-align: center;
+
+    margin-top: 45px;
 }
+
+
 
 .footer li{
     text-align: left;
@@ -84,31 +95,40 @@ li:last-child{
 
 /* phone */
 
-
+.close-button{
+    font-family: Inter-Light;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 1024px)  {
+    .footer{
+    margin: 50px 0 0 0;
+}
     ul{
         display: block;
-        margin: 0;
+        /* margin: 0; */
         width: 78.125vw;
         background-color: #141414;
 
         position: absolute;
-        z-index: 99;
-        
-
-
-        
+        z-index: 99; 
+        top: 0;
+        left: -10vw;
+    }
+    li a{
+    font-size: 14px;
+    line-height: 17px;
     }
 
     li{
         text-align: left;
-        margin: 40px 0 80px 7%;
+        margin: 0 0 44px 20px;
         width: 100% !important;
 
+        font-weight: 600;
+        font-size: 14px;
         font-family: Inter;
-        font-style: normal;
-        font-weight: 500;
+        font-style: bold;
         font-size: 3.75vw;
         line-height: 15px;
 
@@ -124,6 +144,11 @@ li:last-child{
 
     .footer li{
         text-align: left;
+    }
+    .close-button{
+        font-family: Inter-Light;
+        font-size: 80px;
+        margin: 38px 0 140px 24px;
     }
 }
 

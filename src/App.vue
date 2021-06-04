@@ -39,6 +39,12 @@ export default {
     font-style: italic;
     font-weight: bold;
 }
+@font-face {
+    font-family: Inter-Light;
+    src: url(static/Inter-ExtraLight.ttf);
+    font-style: italic;
+    font-weight: normal;
+}
 #app {
     background-color: #0b0b0b;
     background-image: url("assets/img/BG.png");
@@ -93,6 +99,10 @@ article ul {
     width: 100%;
     margin: 0;
 }
+
+.Article.Account_article{
+    margin: 0 0 80px 0;
+}
 @media screen and (max-width: 1440px) {
 .cards ul li {
     margin: 0 30px 0 0 ;
@@ -118,8 +128,8 @@ article ul {
         padding: 0 0 30px 20px;
     }
     .cards ul{
-        width: calc(100% - 20px);
-        margin: 0 0 0 20px;
+        width: calc(100% - 10px);
+        margin: 0 0 0 10px;
     }
     .cards ul li {
         margin: 0 6.125% 0 0 ;

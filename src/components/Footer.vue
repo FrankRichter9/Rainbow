@@ -21,8 +21,10 @@
                 </router-link>
             </section>
             
-            <span class="design-name">
+
+            <span class="design-name designer">
                 Designed by DivineDSGN
+
             </span>
         </section>
     </footer>
@@ -77,16 +79,16 @@ ul{
 }
 
 .footer_info{
-    font-family: Inter;
+    font-family: Inter-Light;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 12px;
     line-height: 16px;
 
     max-width: 700px;
-    margin: 3.263888888888889% 0 4.180555555555556% 7.291666666666667%;
-}
 
+    margin: 3.263888888888889% 20px 6.180555555555556% 20px;
+}
 .footer_logo{
     margin: 4% 7.291666666666667% 0 0;
 }
@@ -98,6 +100,14 @@ ul{
     font-weight: 800;
     letter-spacing: 0.1em;
     margin-left: 11px;
+ }
+ 
+.footer_logo{
+    margin: 0 7.291666666666667% 40px 0;
+}
+.footer_nav nav .footer{
+    margin: 0 0 0 20px !important;
+
 }
 
 
@@ -110,9 +120,14 @@ ul{
         justify-content: flex-start;
         flex-direction: column;
     }
+    .footer li{
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 17px;
+    }
     .footer_info{
-        font-size: 3vw;
-        line-height: 3.4vw;
+        font-size: 12px;
+        line-height: 16px;
     }
 
     .logo{
@@ -130,18 +145,21 @@ ul{
     }
     
     .logo_text{
-        font-family: Inter;
+        font-family: Inter-Bold;
         font-style: normal;
-        font-size: 14px;
-        margin: 49px 7.291666666666667% 0 0;
+        font-size: 15px;
+        margin: 42px 7.291666666666667% 0 0;
     }
     .footer_logo{
         width: 100%;
     }
-    .footer_logo span{
-        margin: 3.263888888888889% 0 20px 7.291666666666667%;
-    }
+    
 
+    .designer{
+        font-size: 15px;
+        font-family: Inter-Bold;
+        margin: 30px 0 0 28px;
+    }
 }
 
 </style>

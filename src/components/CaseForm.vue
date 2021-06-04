@@ -167,7 +167,7 @@ input {
     padding: 15px 26px;
     /* border: 1px solid red; */
     cursor: pointer;
-    width: 102px;
+    width: 25%;
     text-align: center;
 }
 
@@ -313,6 +313,10 @@ input {
     }
     .radio, .guarantee{
         display: flex;
+    }
+    .radio div {
+        font-size: 12px;
+        padding: 15px 5vw;
     }
 }
 </style>
