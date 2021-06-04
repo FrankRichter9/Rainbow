@@ -42,7 +42,14 @@ export default {
             'footer',
             'activeNav',
             ],
-}
+    watch: {
+        activeNav: function () {
+            if(this.activeNav)document.body.style.overflowY = "hidden";
+            else 
+            document.body.style.overflowY = "scroll"
+            
+    },
+}}
 </script>
 
 
@@ -114,6 +121,7 @@ li:last-child{
         z-index: 99; 
         top: 0;
         left: -10vw;
+        height: 100vh;
     }
     li a{
     font-size: 14px;

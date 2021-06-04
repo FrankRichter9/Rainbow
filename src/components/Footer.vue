@@ -90,7 +90,7 @@ ul{
     margin: 3.263888888888889% 20px 6.180555555555556% 20px;
 }
 .footer_logo{
-    margin: 4% 7.291666666666667% 0 0;
+    margin: 6% 7.291666666666667% 0 0;
 }
 
 .design-name{
@@ -102,9 +102,7 @@ ul{
     margin-left: 11px;
  }
  
-.footer_logo{
-    margin: 0 7.291666666666667% 40px 0;
-}
+
 .footer_nav nav .footer{
     margin: 0 0 0 20px !important;
 
@@ -152,6 +150,7 @@ ul{
     }
     .footer_logo{
         width: 100%;
+        padding: 0 0 35px 0;
     }
     
 
