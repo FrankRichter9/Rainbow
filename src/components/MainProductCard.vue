@@ -240,6 +240,15 @@ li:first-child {
         margin: unset;
     }
 
+    .main_card_name {
+        font-family: Inter-BoldItalic;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 40px 15px 25px;
+    }
+
     .Main_card {
         background-color: #6bf854;
 

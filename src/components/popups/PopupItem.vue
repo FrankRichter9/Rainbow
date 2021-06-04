@@ -166,7 +166,14 @@ export default {
             console.log(this.form)
         },
     },
-}
+    watch: {
+        openId: function () {
+            if(this.openId > 0)document.body.style.overflowY = "hidden";
+            else 
+            document.body.style.overflowY = "scroll"
+            
+    },
+}}
 </script>
 
 <style scoped>
@@ -486,6 +493,7 @@ input {
 .error_state {
     border: 1px solid #fa4339;
 }
+
 
 @media screen and (max-width: 1024px) {
     .percent {

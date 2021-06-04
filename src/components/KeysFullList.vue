@@ -64,8 +64,8 @@ export default {
 @media only screen and (max-width: 1024px) {
     .card_list {
         /* justify-content: center; */
-        width: calc(100% - 24px);
-        margin: 0 12px;
+        width: calc(100% - 10px);
+        margin: 0 0 0 10px;
     }
     .none {
         display: none;
@@ -87,7 +87,7 @@ export default {
         flex-flow: row nowrap;
     }
     .mobile li {
-        margin: 0 0 0 6.125%;
+        margin: 0 10px 0 0;
     }
     .none{
         display: none;
