@@ -108,9 +108,13 @@ li:last-child{
 }
 
 @media screen and (max-width: 1024px)  {
+    .nav_header ul{
+        
+        height: 100vh;
+    }
     .footer{
-    margin: 50px 0 0 0;
-}
+        margin: 50px 0 0 0;
+    }
     ul{
         display: block;
         /* margin: 0; */
@@ -121,7 +125,6 @@ li:last-child{
         z-index: 99; 
         top: 0;
         left: -10vw;
-        height: 100vh;
     }
     li a{
     font-size: 14px;

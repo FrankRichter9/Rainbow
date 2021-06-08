@@ -101,7 +101,7 @@ article ul {
 }
 
 .Article.Account_article{
-    margin: 0 0 80px 0;
+    margin-bottom: 80px;
 }
 @media screen and (max-width: 1440px) {
 .cards ul li {

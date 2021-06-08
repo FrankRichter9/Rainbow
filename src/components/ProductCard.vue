@@ -5,13 +5,13 @@
         }" @click.prevent="openPopupId = 1">
             <div class="reletive">
                 <div class="vignette">
-                    <img class="game-name" src="@/assets/img/gta.png" alt="Название">
+                    <img class="game-name" :src="product.imgLink" alt="Название">
                 </div>
             </div>
             
-            <span class="card_name">Need for Speed: Most Wanted</span>
+            <span class="card_name">{{product.displayName}}</span>
             <div class="flex">
-                <span class="card_price">1119 ₽</span>
+                <span class="card_price">{{product.price}} ₽</span>
                 <a href="#" class="button">	<img src="@/assets/img/arrow-white.png" alt="Стрелочка" class="arrow-white"></a>
             </div>
         </div>
@@ -28,7 +28,8 @@ export default {
         PopupItem
     },
     props: [
-        'type'
+        'type',
+        'product'
     ],
     data(){
         return {
@@ -83,7 +84,7 @@ export default {
 
 .card_name{
     display: block;
-    
+    height: 38px;
     font-family: Inter;
     font-style: italic;
     font-weight: 600;
@@ -106,7 +107,7 @@ export default {
 
     color: #191A1A;
 
-    margin: 7.771929824561404% 0 0 8.771929824561404%;
+    margin: 12px 0 0 8.771929824561404%;
 }
 
 .button{
@@ -128,7 +129,7 @@ export default {
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
 
-    margin: 5.263157894736842% 7.017543859649123% 0 8.771929824561404%;
+    margin: 7px 7.017543859649123% 0 8.771929824561404%;
     
 }
 

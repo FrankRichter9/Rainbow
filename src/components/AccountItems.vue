@@ -6,7 +6,12 @@
         
         <section class="cards">
             <ul>
-                <ProductCard v-for="i in 4" v-bind:key="i"/>
+                <ProductCard 
+                    v-show="mainAccounts"
+                    v-for="product in mainAccounts" 
+                    v-bind:key="product.id"
+                    :product="product"
+                    />
             </ul>
         </section>
     </article>
@@ -15,19 +20,18 @@
 
 <script>
 import ProductCard from '@/components/ProductCard'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
-    data(){
-        return {
-           
-        }
-    },
+    computed: mapGetters(['allAccounts', 'mainAccounts']),
     components: {
         ProductCard,
     },
-    methods: {
-        
+    methods: mapActions(['fetchMainAccounts']),
+    async mounted(){
+        this.fetchMainAccounts()
     }
+    
 }
 </script>
 

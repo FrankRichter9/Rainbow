@@ -20,7 +20,7 @@
                 &equiv;
             </span>
             <MainNav 
-                class="main_nav"
+                class="main_nav nav_header"
                 :class="{display_block: activeNav}"
                 :activeNav="activeNav"
                 @close="activeNav = !activeNav"
@@ -82,6 +82,7 @@ a{
 }
 
 @media screen and (max-width: 1024px)  {
+    
     .mobile_menu{
         display: block;
         font-size: 17vw;

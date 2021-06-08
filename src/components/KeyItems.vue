@@ -5,7 +5,7 @@
         </router-link>
         <section class="cards">
             <ul>
-                <ProductCard v-for="i in 4" v-bind:key="i" />
+                <!-- <ProductCard v-for="i in 4" v-bind:key="i" /> -->
             </ul>
         </section>
     </article>
