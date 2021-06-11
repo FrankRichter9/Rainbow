@@ -9,8 +9,9 @@
         <section class="cards">
             <ul class="card_list" :class="{mobile: type === 'case'}">
                 <ProductCard 
-                    v-for="i in 16"
-                    v-bind:key="i"
+                    v-for="product in items" 
+                    v-bind:key="product.id"
+                    :product="product"
                     :type="'small'"
                     @open="open"
                     />
@@ -35,6 +36,22 @@ export default {
             this.$emit("open", id)
         },
     },
+    computed: {
+        items: function () {
+                let allItems = []
+                let arr = this.$store.getters.getItemsByType("account")
+                if(this.type === 'accounts'){
+                    arr.forEach(element => {
+                        element.products.forEach(item => {
+                            allItems.push(item)
+                    })
+                    });
+                    return allItems;
+                }else return []
+                
+
+    },
+}
 }
 </script>
 

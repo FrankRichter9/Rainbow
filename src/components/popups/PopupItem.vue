@@ -4,44 +4,11 @@
         <section class="popup_body">
             <section class="info">
                 <div class="title">
-                    Ключ Rainbow Six: Siege Standart 
+                    {{product.name}}
                 </div>
 
                 <div class="text">
-                    Мгновенно после оплаты и со скидками вы получаете
-                    лицензионный ключ активации на полноценную версию UPLAY игры
-                    Tom Clancy´s Rainbow Six: Siege. Это НЕ урезанная
-                    стартер-версия <br />
-
-                    «Tom Clancy’s Rainbow Six® Осада» – новая часть всемирно
-                    известной серии шутеров от первого лица, разработанная
-                    Ubisoft Montreal для консолей нового поколения и PC. В
-                    основе сюжета игры лежит борьба с терроризмом по всему миру.
-                    В «Tom Clancy’s Rainbow Six Осада» вы сможете в полной мере
-                    приобщиться к искусству разрушения. Вас ждут напряженные бои
-                    с постоянным риском для жизни, возможность командной игры и,
-                    конечно, сложнейшие операции. Одна ошибка – и все взлетит на
-                    воздух! Сетевой режим выводит жаркие перестрелки и
-                    тактическое планирование на новый уровень в лучших традициях
-                    серии «Tom Clancy’s Rainbow Six». <br />
-
-                    Станьте агентом по борьбе с мировым терроризмом, мастером
-                    ведения боя на коротких дистанциях и специалистом по захвату
-                    стратегически важных объектов. Издание «Tom Clancy’s Rainbow
-                    Six® Осада» «Тактика осады» предоставит вам массу
-                    возможностей отточить тактические навыки и лично возглавить
-                    спасательную операцию или атаку на неприятеля. <br />
-
-                    Активации ключа:<br />
-
-                    •Если не установлен Uplay клиент, скачайте и установите его
-                    . (http://uplay.ubi.com/) •Войдите в свой аккаунт Uplay или
-                    зарегистрируйте новый, если у вас его еще нет. •Нажмите на
-                    изображение «Шестерёнки» и выберите «Активировать продукт».
-                    •Введите ключ активации (для его получения необходимо купить
-                    Tom Clancys Rainbow Six:Siege). •После этого игра
-                    отобразится в библиотеке игр и вы сможете скачать Tom
-                    Clancys Rainbow Six:Siege.
+                    {{product.description}}
                 </div>
             </section>
             <section class="form">
@@ -51,8 +18,8 @@
                 <div class="price">
                     <span>Цена:</span>
                     <span>
-                        <span class="old_price">119₽</span>
-                        <span class="now_price">119₽</span>
+                        <span class="old_price">{{product.prePrice}}₽</span>
+                        <span class="now_price">{{product.price}}₽</span>
                     </span>
                 </div>
                 <section>
@@ -127,7 +94,7 @@
                     </div>
 
                     <button type="button" class="submit" @click="getObject">
-                        Купить за 169 ₽
+                        Купить за {{product.price}} ₽
                     </button>
                 </div>
             </section>
@@ -152,7 +119,10 @@ export default {
             isFocus: "no",
         }
     },
-    props: ["openId"],
+    props: [
+        "openId",
+        "product"
+        ],
     computed: {
         getId() {
             return (this.popup.active = this.openId > 0 ? true : false)

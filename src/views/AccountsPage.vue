@@ -2,7 +2,7 @@
     <div>
         <Header />
         <main>
-            <KeysFullList :title="'Аккаунты'" />
+            <KeysFullList :title="'Аккаунты'" :type="'accounts'" />
         </main>
         <Footer />
     </div>

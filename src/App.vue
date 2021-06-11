@@ -17,6 +17,9 @@ export default {
         Header,
         Footer,
     },
+    beforeCreate: function () {
+      this.$store.dispatch('getItems');
+    }
 }
 </script>
 

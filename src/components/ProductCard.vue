@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <PopupItem :openId="openPopupId" @close="closePopup" />
+        <PopupItem :openId="openPopupId" @close="closePopup" :product="product"/>
     </li>
 </template>
 
