@@ -34,6 +34,7 @@
 import MainNav from '@/components/MainNav'
 
 export default {
+    name: 'Footer',
    components: {
        MainNav
    }

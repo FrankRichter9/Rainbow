@@ -1,14 +1,14 @@
 <template>
 <transition name="fade">
-    <article class="popup" v-show="getId">
-        <section class="popup_body">
+    <article class="popup" v-if="product" v-show="getId">
+        <section class="popup_body" >
             <section class="info">
                 <div class="title">
                     {{product.name}}
                 </div>
 
-                <div class="text">
-                    {{product.description}}
+                <div class="text" v-html="product.description">
+                    
                 </div>
             </section>
             <section class="form">
@@ -105,6 +105,7 @@
 
 <script>
 export default {
+    name: 'PopupItem',
     data() {
         return {
             popup: {
@@ -160,7 +161,6 @@ export default {
 
 
 .percent{
-
     margin: -25px 0 0 5px;
     position: absolute;
 }

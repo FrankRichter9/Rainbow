@@ -24,6 +24,7 @@
 import ProductCard from "@/components/ProductCard"
 
 export default {
+    name: 'KeysFullList',
     props: ['title', 'type'],
     data() {
         return {}
@@ -38,14 +39,37 @@ export default {
     },
     computed: {
         items: function () {
+            
                 let allItems = []
-                let arr = this.$store.getters.getItemsByType("account")
+                
                 if(this.type === 'accounts'){
+                    let arr = this.$store.getters.getItemsByType("account")
                     arr.forEach(element => {
                         element.products.forEach(item => {
                             allItems.push(item)
                     })
                     });
+                    
+                    return allItems;
+                }else 
+                if(this.type === 'keys'){
+                    let arr = this.$store.getters.getItemsByType("mc")
+                    arr.forEach(element => {
+                        element.products.forEach(item => {
+                            allItems.push(item)
+                    })
+                    });
+                    
+                    return allItems;
+                }else 
+                if(this.type === 'newItems'){
+                    let arr = this.$store.getters.getItemsByType("mc-fullprem")
+                    arr.forEach(element => {
+                        element.products.forEach(item => {
+                            allItems.push(item)
+                    })
+                    });
+                    
                     return allItems;
                 }else return []
                 

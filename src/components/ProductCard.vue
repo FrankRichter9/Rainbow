@@ -24,6 +24,7 @@
 import PopupItem from '@/components/popups/PopupItem'
 
 export default {
+    name: 'ProductCard',
     components: {
         PopupItem
     },

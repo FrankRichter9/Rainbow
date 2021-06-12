@@ -33,7 +33,11 @@
     </article>
 </template>
 
-
+<script>
+export default {
+    name: 'CaseScrolling',
+}
+</script>
 
 
 

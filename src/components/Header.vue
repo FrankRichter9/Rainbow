@@ -35,6 +35,7 @@ import MainNav from '@/components/MainNav'
 
 
 export default {
+    name: 'Header',
     data(){
         return {
             activeNav: false,

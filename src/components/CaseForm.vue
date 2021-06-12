@@ -76,6 +76,7 @@
 
 <script>
 export default {
+    name: 'CaseForm',
     data() {
         return {
             count: 1,

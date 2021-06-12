@@ -25,6 +25,7 @@ export default {
                     });
                     return item;
                 });
+                // console.log(items)
                 commit("addItems", items);
 
                 api.$caseapi.getAllCases().then(function (data) {

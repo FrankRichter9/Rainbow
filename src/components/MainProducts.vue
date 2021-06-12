@@ -28,6 +28,7 @@ import CaseCard from '@/components/CaseCard'
 import PromocodeCard from '@/components/PromocodeCard'
 
 export default {
+    name: 'MainProducts',
     data(){
         return {
             products: [

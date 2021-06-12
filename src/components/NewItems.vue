@@ -5,10 +5,11 @@
         </router-link>
         <section class="cards">
             <ul>
-                <!-- <ProductCard 
-                    v-for="product in allProducts" 
-                    v-bind:key="product.id" 
-                    :product="product"/> -->
+                <ProductCard 
+                    v-for="product in items" 
+                    v-bind:key="product.id"
+                    :product="product"
+                    />
             </ul>
         </section>
     </article>
@@ -16,17 +17,25 @@
 
 <script>
 import ProductCard from "@/components/ProductCard"
-import { mapGetters, mapActions } from 'vuex'
 
 export default {
-    computed: mapGetters(['allProducts']),
+    name: 'NewItems',
+    computed: {
+        items: function () {
+            let res = this.$store.getters.getItemsByType("mc-fullprem")
+            console.log(res)
+                if (res === [])
+                    return [{id: 0}, {id: 1}, {id: 2}];
+                else
+                    return [
+                        res[0].products[0],
+                    ]
+            }
+    },
     components: {
         ProductCard,
     },
-    methods: mapActions(['fetchProducts']),
-    // async mounted(){
-    //     this.fetchProducts()
-    // }
+    
     
 }
 </script>

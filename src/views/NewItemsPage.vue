@@ -2,7 +2,7 @@
 <div>
   <Header />
   <main>
-    <KeysFullList :title="'Новинки'" />
+    <KeysFullList :title="'Новинки'" :type="'newItems'" />
   </main>
   <Footer />
 </div>

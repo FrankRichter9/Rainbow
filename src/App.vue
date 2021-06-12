@@ -2,7 +2,7 @@
     <div id="app">
         <div class="container">
             <!-- <Header /> -->
-            <router-view />
+            <router-view v-if="!inLoading"/>
             <!-- <Footer /> -->
         </div>
     </div>
@@ -19,6 +19,11 @@ export default {
     },
     beforeCreate: function () {
       this.$store.dispatch('getItems');
+    },
+    computed: {
+        inLoading: function () {
+            return this.$store.state.items.inLoading;
+      }
     }
 }
 </script>

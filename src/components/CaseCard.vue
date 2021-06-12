@@ -18,6 +18,12 @@
     </li>
 </template>
 
+<script>
+export default {
+    name: 'CaseCard',
+}
+</script>
+
 <style scoped>
 .Main_card{
     background-color: #FF7373;

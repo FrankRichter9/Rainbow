@@ -36,6 +36,7 @@
 
 <script>
 export default {
+    name: 'MainProductCard',
     props: ["index"],
     data() {
         return {}
